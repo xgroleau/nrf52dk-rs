@@ -15,8 +15,10 @@ async fn main(_spawner: Spawner, p: Peripherals) {
 
     loop {
         led.set_high();
+        defmt::info!("Seting high");
         Timer::after(Duration::from_millis(300)).await;
         led.set_low();
+        defmt::info!("Seting low");
         Timer::after(Duration::from_millis(300)).await;
     }
 }
