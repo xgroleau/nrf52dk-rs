@@ -13,11 +13,7 @@
         overlays = [ (import rust-overlay) ];
         pkgs = import nixpkgs { inherit system overlays; };
 
-        rustpkg = pkgs.rust-bin.selectLatestNightlyWith (toolchain:
-          toolchain.default.override {
-            targets = [ "thumbv7em-none-eabihf" ];
-          });
-
+        rustpkg = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
       in with pkgs; {
         devShell = mkShell { buildInputs = [ flip-link probe-run rustpkg ]; };
       });
