@@ -16,10 +16,7 @@
         rustpkg = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
       in with pkgs; {
         devShell = mkShell {
-          buildInputs = [ flip-link probe-run rustpkg ];
-          shellHook = ''
-            DEFMT_LOG=info
-          '';
+          buildInputs = [ cargo-flash flip-link probe-run rustpkg ];
         };
       });
 }

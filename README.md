@@ -9,14 +9,14 @@ An application exploring rust on the nrf52840-dk with [probe-run](https://crates
 If you use [`nix`](https://nixos.org/), you can simply use `nix develop` and all the dependencies will be downloaded.
 
 ### Cargo
-Install flip-link and probe-run
+Install flip-link and probe-run and probe-rs-cli.
 ```console
-$ cargo install flip-link probe-run
+$ cargo install flip-link probe-run probe-rs-cli
 ```
 
 ## Setup
 
-### Soft device
+### Softdevice
 You need to flash the softdevice when the device is erased.
 ``` sh
 probe-rs-cli download --format hex s140_nrf52_7.2.0_softdevice.hex --chip nRF52840_xxAA --chip-erase
