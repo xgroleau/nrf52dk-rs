@@ -2,6 +2,7 @@
 #![no_main]
 #![feature(type_alias_impl_trait)]
 
+use defmt;
 use defmt_rtt as _;
 use embassy::executor::Spawner;
 use embassy::time::{Duration, Timer};

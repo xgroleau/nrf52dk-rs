@@ -4,6 +4,15 @@ name = "embassy-app"
 edition = "2018"
 version = "0.1.0"
 
+[lib]
+harness = false
+
+# needed for each integration test
+[[test]]
+name = "integration"
+harness = false
+
+
 [dependencies]
 defmt = "0.3.0"
 defmt-rtt = "0.3.0"
