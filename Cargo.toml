@@ -23,6 +23,8 @@ cortex-m-rt = "0.7.0"
 
 embassy = { version = "0.1.0", path = "../embassy/embassy", features = ["defmt"] }
 embassy-nrf = { version = "0.1.0", path = "../embassy/embassy-nrf", features = ["defmt", "nrf52840", "time-driver-rtc1", "gpiote"] }
+nrf-softdevice = { version = "0.1.0", git = "https://github.com/embassy-rs/nrf-softdevice", features = ["defmt", "nrf52840", "s140", "ble-peripheral", "critical-section-impl"] }
+nrf-softdevice-s140 = { version = "0.1.1", git = "https://github.com/embassy-rs/nrf-softdevice" }
 
 [dev-dependencies]
 defmt-test = "0.3.0"

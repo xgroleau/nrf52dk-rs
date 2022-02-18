@@ -2,7 +2,7 @@
   description = "Rust dev shell";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/master";
     rust-overlay.url = "github:oxalica/rust-overlay";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -16,7 +16,8 @@
         rustpkg = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
       in with pkgs; {
         devShell = mkShell {
-          buildInputs = [ cargo-flash flip-link probe-run rustpkg ];
+          buildInputs =
+            [ cargo-flash flip-link probe-rs-cli probe-run rustpkg ];
         };
       });
 }
