@@ -102,7 +102,7 @@ checksum = "37ff967e867ca14eba0c34ac25cd71ea98c678e741e3915d923999bb2fe7c826"
 dependencies = [
  "bare-metal 0.2.5",
  "bitfield",
- "embedded-hal",
+ "embedded-hal 0.2.7",
  "volatile-register",
 ]
 
@@ -281,7 +281,8 @@ dependencies = [
  "critical-section",
  "defmt",
  "embassy-macros",
- "embedded-hal",
+ "embedded-hal 0.2.7",
+ "embedded-hal-async",
  "futures",
  "heapless",
  "pin-project",
@@ -323,7 +324,7 @@ dependencies = [
  "embassy-hal-common",
  "embassy-macros",
  "embedded-dma",
- "embedded-hal",
+ "embedded-hal 0.2.7",
  "embedded-storage",
  "fixed",
  "futures",
@@ -350,6 +351,22 @@ checksum = "35949884794ad573cf46071e41c9b60efb0cb311e3ca01f7af807af1debc66ff"
 dependencies = [
  "nb 0.1.3",
  "void",
+]
+
+[[package]]
+name = "embedded-hal"
+version = "1.0.0-alpha.6"
+source = "git+https://github.com/embassy-rs/embedded-hal?branch=embassy#1fa64a1d2f9cc1a1ae632dbfcc4064a9f6504a3f"
+dependencies = [
+ "nb 1.0.0",
+]
+
+[[package]]
+name = "embedded-hal-async"
+version = "0.0.1"
+source = "git+https://github.com/embassy-rs/embedded-hal?branch=embassy#1fa64a1d2f9cc1a1ae632dbfcc4064a9f6504a3f"
+dependencies = [
+ "embedded-hal 1.0.0-alpha.6",
 ]
 
 [[package]]
@@ -880,13 +897,3 @@ checksum = "9ee8f19f9d74293faf70901bc20ad067dc1ad390d2cbf1e3f75f721ffee908b6"
 dependencies = [
  "vcell",
 ]
-
-[[patch.unused]]
-name = "embassy-traits"
-version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy#59f909e66533097b56093ec55fdd1341dbff6744"
-
-[[patch.unused]]
-name = "nrf-softdevice-defmt-rtt"
-version = "0.1.0"
-source = "git+https://github.com/embassy-rs/nrf-softdevice#96677c1f5a2da8aa5b43602eb5332bbaf6b6d403"
