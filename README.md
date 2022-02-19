@@ -19,7 +19,7 @@ $ cargo install flip-link probe-run probe-rs-cli
 ### Softdevice
 You need to flash the softdevice when the device is erased.
 ``` sh
-probe-rs-cli download --format hex softdevices/s140_nrf52_7.3.0_softdevice.hex  --chip nRF52840_xxAA --chip-erase
+probe-rs-cli download --format hex softdevices/s140_nrf52_7.2.0_softdevice.hex  --chip nRF52840_xxAA --chip-erase
 ```
 
 
