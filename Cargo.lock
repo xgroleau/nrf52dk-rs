@@ -617,6 +617,7 @@ dependencies = [
  "defmt-test",
  "embassy",
  "embassy-nrf",
+ "futures",
  "nrf-softdevice",
  "nrf-softdevice-s140",
  "panic-probe",
