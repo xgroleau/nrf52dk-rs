@@ -228,6 +228,7 @@ dependencies = [
 [[package]]
 name = "embassy"
 version = "0.1.0"
+source = "git+https://github.com/embassy-rs/embassy#59f909e66533097b56093ec55fdd1341dbff6744"
 dependencies = [
  "atomic-polyfill",
  "cfg-if",
@@ -242,22 +243,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "embassy-app"
-version = "0.1.0"
-dependencies = [
- "cortex-m",
- "cortex-m-rt",
- "defmt",
- "defmt-rtt",
- "defmt-test",
- "embassy",
- "embassy-nrf",
- "panic-probe",
-]
-
-[[package]]
 name = "embassy-hal-common"
 version = "0.1.0"
+source = "git+https://github.com/embassy-rs/embassy#59f909e66533097b56093ec55fdd1341dbff6744"
 dependencies = [
  "cortex-m",
  "embassy",
@@ -268,6 +256,7 @@ dependencies = [
 [[package]]
 name = "embassy-macros"
 version = "0.1.0"
+source = "git+https://github.com/embassy-rs/embassy#59f909e66533097b56093ec55fdd1341dbff6744"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -278,6 +267,7 @@ dependencies = [
 [[package]]
 name = "embassy-nrf"
 version = "0.1.0"
+source = "git+https://github.com/embassy-rs/embassy#59f909e66533097b56093ec55fdd1341dbff6744"
 dependencies = [
  "cfg-if",
  "cortex-m",
@@ -486,13 +476,27 @@ dependencies = [
 
 [[package]]
 name = "nrf52840-pac"
-version = "0.10.1"
+version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "209c71d29ce1c0e9249b59ffff1ff5035c68b65070bf4c1315767fa4c93103ac"
+checksum = "9efa9d1e910e3b825fd7e28f369363a8e036b386b77e21035b9f0e510de199cf"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
  "vcell",
+]
+
+[[package]]
+name = "nrf52dk-rs"
+version = "0.1.0"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "defmt",
+ "defmt-rtt",
+ "defmt-test",
+ "embassy",
+ "embassy-nrf",
+ "panic-probe",
 ]
 
 [[package]]
