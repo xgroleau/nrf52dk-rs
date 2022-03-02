@@ -1,6 +1,6 @@
 # nRF52DK-rs
 
-An application exploring rust on the nrf52840-dk with [probe-run](https://crates.io/crates/probe-run) [defmt](https://github.com/knurling-rs/defmt, [flip-link]: https://github.com/knurling-rs/flip-link [embassy](https://github.com/embassy-rs/embassy)
+An application exploring rust on the nrf52840-dk with [probe-run](https://crates.io/crates/probe-run) [defmt](https://github.com/knurling-rs/defmt), [flip-link](https://github.com/knurling-rs/flip-link) [embassy](https://github.com/embassy-rs/embassy)
 
 
 ## Setup
